@@ -48,9 +48,10 @@ jobs:
         uses: step-security/harden-runner@cba0d00b1fc9a034e1e642ea0f1103c282990604 # v2.5.0
         with:
           disable-sudo: true
-          egress-policy: audit
+          egress-policy: block
           allowed-endpoints: >
             api.github.com:443
+            *.actions.githubusercontent.com:443
             api.nuget.org:443
             dc.services.visualstudio.com:443
             files.pythonhosted.org:443
